@@ -52,7 +52,8 @@ module.exports = {
       "stream": require.resolve("stream-browserify"),
       "os": false,
       "nw.gui": false,
-      "@kaspa/wallet-worker": require.resolve("./node_modules/@kaspa/wallet-worker")
+      "@kaspa/wallet-worker": require.resolve("./node_modules/@kaspa/wallet-worker"),
+      "vm": require.resolve("vm-browserify")
   	}
   },
   output: {
