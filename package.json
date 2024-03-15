@@ -6,7 +6,7 @@
   "main": "pwa.js",
   "scripts": {
     "prepare": "npx webpack",
-    "startserver": "node pwa.js --grpc 127.0.0.1:42110 --mainnet --debug --verbose --host 0.0.0.0"
+    "startserver": "node pwa.js --grpc 127.0.0.1:16110 --mainnet --debug --verbose --host 0.0.0.0"
   },
   "author": "ASPECTRON Inc.",
   "license": "ISC",
@@ -20,8 +20,8 @@
     "@kaspa/grpc-node": ">=1.0.8",
     "@kaspa/grpc-web": ">=1.0.2",
     "@kaspa/ux": "file:../kaspa-ux",
-    "@kaspa/wallet": ">=1.4.26",
-    "@kaspa/wallet-worker": ">=1.1.25",
+    "@kaspa/wallet": "file:kaspa/wallet",
+    "@kaspa/wallet-worker": "file:kaspa/wallet-worker",
     "@webcomponents/webcomponentsjs": "2.6.0",
     "buffer": "6.0.3",
     "cloudflare": "2.9.1",

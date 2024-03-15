@@ -181,7 +181,7 @@ class KaspaPWA extends EventEmitter {
 							indexHtml = data.replace(
 								`<script type="module" src="/dist/wallet-app.js"></script>`,
 								`\n${script}\n\t<script type="module" src="/dist/wallet-app.js?v=${hash}"></script>`);
-							indexHtml = indexHtml.replace('ident:"kaspa:ident"', `ident:"${hash}"`)
+							indexHtml = indexHtml.replace('ident:"hoosat:ident"', `ident:"${hash}"`)
 							//console.log(indexHtml);
 							resolve();
 						})
@@ -292,7 +292,7 @@ class KaspaPWA extends EventEmitter {
 			process.exit(1);
 		}
 
-		let network = filter.shift() || 'kaspa';
+		let network = filter.shift() || 'hoosat';
 		let port = Wallet.networkTypes[network].port;
 		let host = this.options.grpc || `127.0.0.1:${port}`;
 
@@ -551,7 +551,7 @@ class KaspaPWA extends EventEmitter {
 		program.parse();
 	}
 
-	KAS(v) {
+	HTN(v) {
 		var [int,frac] = Decimal(v).mul(1e-8).toFixed(8).split('.');
 		int = int.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		frac = frac?.replace(/0+$/,'');

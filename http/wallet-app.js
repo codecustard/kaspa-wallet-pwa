@@ -52,15 +52,15 @@ class KaspaWalletApp extends FlowApp {
 	constructor(){
 		super();
 
-		this.networks = ['kaspa','kaspatest','kaspadev','kaspasim'];
-		this.network = "kaspa";
+		this.networks = ['hoosat','kaspatest','kaspadev','kaspasim'];
+		this.network = "hoosat";
 		this.addresses = {};
 		this.available = {};
 		this.limits = {};
 		this.opt = {};
 
 		this.aliases = {
-			kaspa : 'MAINNET',
+			hoosat : 'MAINNET',
 			kaspatest : 'TESTNET',
 			kaspadev : 'DEVNET',
 			kaspasim : 'SIMNET'
